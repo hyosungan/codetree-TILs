@@ -1,8 +1,15 @@
 from collections import deque
 
-n,m=map(int,input().split())
+# n,m=map(int,input().split())
 
-grid = [[int(x) for x in input().split()] for _ in range(n)]
+# grid = [[int(x) for x in input().split()] for _ in range(n)]
+
+n, m = tuple(map(int, input().split()))
+
+grid = [
+    list(map(int, input().split()))
+    for _ in range(n)
+]
 
 visited=[[False for _ in range(m)] for _ in range(n)]
 
@@ -10,19 +17,15 @@ q=deque()
 
 
 def bfs():
-    dxs=[1,-1,0,0]
-    dxy=[0,0,-1,1]
-
+    
     while q:
         x,y=q.popleft()
-        if x==n-1 and y==m-1:
-            return print(1)
+        dxs=[1,-1,0,0]
+        dxy=[0,0,-1,1]
         for dx,dy in zip(dxs,dxy):
             new_x,new_y=x+dx,y+dy
             if is_ok(new_x,new_y):
                 push(new_x,new_y)
-    else:
-        return print(0)
 
 
 def is_ok(x,y):
@@ -30,7 +33,7 @@ def is_ok(x,y):
         return False
     if grid[x][y]==0:
         return False
-    if visited==True:
+    if visited[x][y]==True:
         return False
     
     return True
@@ -47,3 +50,7 @@ def push(x,y):
 
 push(0,0)
 bfs()
+
+answer=1 if visited[n - 1][m - 1] else 0
+
+print(answer)
