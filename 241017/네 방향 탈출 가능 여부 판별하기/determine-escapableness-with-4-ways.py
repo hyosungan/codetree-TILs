@@ -17,11 +17,11 @@ q=deque()
 
 
 def bfs():
-    
+    dxs=[1,-1,0,0]
+    dxy=[0,0,-1,1]
     while q:
         x,y=q.popleft()
-        dxs=[1,-1,0,0]
-        dxy=[0,0,-1,1]
+        
         for dx,dy in zip(dxs,dxy):
             new_x,new_y=x+dx,y+dy
             if is_ok(new_x,new_y):
