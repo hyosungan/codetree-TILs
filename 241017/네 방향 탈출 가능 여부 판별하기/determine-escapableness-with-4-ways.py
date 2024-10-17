@@ -1,15 +1,15 @@
 from collections import deque
 
-# n,m=map(int,input().split())
+n,m=map(int,input().split())
 
-# grid = [[int(x) for x in input().split()] for _ in range(n)]
+grid = [[int(x) for x in input().split()] for _ in range(n)]
 
-n, m = tuple(map(int, input().split()))
+# n, m = tuple(map(int, input().split()))
 
-grid = [
-    list(map(int, input().split()))
-    for _ in range(n)
-]
+# grid = [
+#     list(map(int, input().split()))
+#     for _ in range(n)
+# ]
 
 visited=[[False for _ in range(m)] for _ in range(n)]
 
