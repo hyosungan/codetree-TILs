@@ -1,33 +1,24 @@
 class Number:
-    def __init__(self, num, idx=0):
+    def __init__(self,num,idx):
         self.num=num
         self.idx=idx
 
-arr=[]
-N=int(input())
 
+N=int(input())
+ans=[0]*(N)
+arr=[]
 numbers=list(map(int,input().split()))
 
-for number in numbers:
-    arr.append(Number(number))
+for idx,num in enumerate(numbers,start=1):
+    arr.append(Number(num,idx))
 
-arr.sort(key=lambda x:x.num)
+arr.sort(key=lambda x:(x.num,x.idx))
 
-for index,number in enumerate(arr,start=1):
-    number.idx=index
-    
-
-ans=[]
-for i in numbers:
-    for number in arr:
-        if i==number.num:
-            ans.append(number.idx)
-            arr.remove(number)
-            break
-            
+for index,number in enumerate(arr):
+    ans[number.idx-1]=index+1
 
 for i in ans:
-    print(i,end=' ')
+    print(i,end=" ")
 
 
 
