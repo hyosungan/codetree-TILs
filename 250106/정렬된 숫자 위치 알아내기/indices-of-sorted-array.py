@@ -15,6 +15,7 @@ arr.sort(key=lambda x:x.num)
 
 for index,number in enumerate(arr,start=1):
     number.idx=index
+    
 
 ans=[]
 for i in numbers:
@@ -22,6 +23,9 @@ for i in numbers:
         if i==number.num:
             ans.append(number.idx)
             arr.remove(number)
+            break
+            
+
 for i in ans:
     print(i,end=' ')
 
