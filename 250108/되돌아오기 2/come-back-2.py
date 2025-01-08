@@ -19,6 +19,7 @@ for i in commands:
         ans+=1
     if x==0 and y==0:
         break
-
+if x!=0 or y!=0:
+    ans=-1        
 print(ans)
     
