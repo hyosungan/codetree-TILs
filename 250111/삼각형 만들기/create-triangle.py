@@ -6,7 +6,7 @@ def triangle(i1,i2,i3):
     x2,y2=points[i2]
     x3,y3=points[i3]
     if (x1==x2 or x1==x3 or x2==x3) and (y1==y2 or y2==y3 or y1==y3):
-        return (x1*y2+x2*y3+x3*y1)-(x2*y1+x3*y2+x1*y3)
+        return abs((x1*y2+x2*y3+x3*y1)-(x2*y1+x3*y2+x1*y3))
     else:
         return 0
 
