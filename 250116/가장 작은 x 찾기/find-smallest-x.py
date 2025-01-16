@@ -7,7 +7,7 @@ while True:
     valid = True
     current_value = x
     for a, b in ranges:
-        if not (a <= current_value <= b):
+        if not (a <= current_value*2 <= b):
             valid = False
             break
         current_value *= 2  # 다음 단계로 값 업데이트
