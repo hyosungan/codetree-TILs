@@ -1,7 +1,7 @@
 n = int(input())
 ranges = [tuple(map(int, input().split())) for _ in range(n)]
 
-x=[i for i in range((ranges[0][1]//2))]
+x=[i for i in range((ranges[0][1]))]
 
 for i,(a,b) in enumerate(ranges):
     for j in x:
