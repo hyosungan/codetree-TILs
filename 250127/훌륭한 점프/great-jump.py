@@ -1,14 +1,14 @@
 n, k = map(int, input().split())
 arr = list(map(int, input().split()))
 
-ans=100
+ans=101
 
 def is_possible(max_num):
     posible_index=[]
     for idx,elem in enumerate(arr):
         if max_num>=elem:
             posible_index.append(idx)
-    if (0 not in posible_index) or ((len(arr)-1) not in posible_index):
+    if (0 not in posible_index) or (int((len(arr)-1)) not in posible_index):
         return False
     
     for i in range(1,len(posible_index)):
@@ -16,11 +16,11 @@ def is_possible(max_num):
             return False
     return True
 
-for i in range(1,max(arr)):
+for i in range(1,max(arr)+1):
     if is_possible(i):
         ans=min(ans,i)
-
 print(ans)
+
 
 
     
