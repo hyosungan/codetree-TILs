@@ -14,8 +14,8 @@ for i in range(N):
                 start=i
                 end=j
             break
- 
-arr[int(end-start)//2]=1
+
+arr[int(end+start)//2]=1
 
 
 ans=N
