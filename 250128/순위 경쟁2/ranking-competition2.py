@@ -2,7 +2,7 @@ n = int(input())
 arr=[]
 A=0
 B=0
-stage='O'
+stage='AB'
 ans=0
 for _ in range(n):
     ci, si = input().split()
