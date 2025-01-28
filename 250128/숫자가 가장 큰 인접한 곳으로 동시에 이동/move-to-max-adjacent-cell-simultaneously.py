@@ -7,7 +7,7 @@ arr = [[0] * (n + 1)] + [[0] + list(map(int, input().split())) for _ in range(n)
 marbles = [tuple(map(int, input().split())) for _ in range(m)]
 curr = [[0]*(n+1) for _ in range(n+1)]
 
-for a,b, in marbles:
+for a,b in marbles:
     curr[a][b]=1
 
 next_arr=[[0]*(n+1) for _ in range(n+1)]
@@ -16,6 +16,10 @@ def is_range(x,y):
     return x>=1 and x<=n and y>=1 and y<=n
 
 def possible(i,j):
+    for i in range(1,n+1):
+        for j in range(1,n+1):
+            next_arr[i][j]=0
+
     max_x=0
     max_y=0
     max_value=0
@@ -37,7 +41,7 @@ def copy():
 def remove_double():
     for i in range(1,n+1):
         for j in range(1,n+1):
-            if next_arr[i][j]>=2:
+            if curr[i][j]>=2:
                 curr[i][j]=0
 
 def move():
