@@ -1,3 +1,7 @@
+import sys
+
+sys.setrecursionlimit(3000)
+
 n = int(input())
 grid = [list(map(int, input().split())) for _ in range(n)]
 
@@ -17,7 +21,6 @@ def is_possible(x,y,k):
 def bomb(max_num):
     global count
     if max_num>=4:
-        
         return True
     else:
         return False
