@@ -1,5 +1,10 @@
 n, m = map(int, input().split())
 village = [list(map(int, input().split())) for _ in range(n)]
+top=0
+for i in range(n):
+    for j in range(m):
+        if village[i][j]>top:
+            top=village[i][j]    
 
 visited=[[0 for _ in range(m)] for _ in range(n)]
 answer=-1
@@ -30,7 +35,7 @@ def dfs(x,y):
             visited[new_x][new_y]=1
             dfs(new_x,new_y)
 
-for k in range(1,101):
+for k in range(1,top):
     ans=0
     new_grid(k)
     for i in range(n):
