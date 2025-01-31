@@ -35,7 +35,7 @@ def dfs(x,y):
             visited[new_x][new_y]=1
             dfs(new_x,new_y)
 
-for k in range(1,top):
+for k in range(1,top+1):
     ans=0
     new_grid(k)
     for i in range(n):
