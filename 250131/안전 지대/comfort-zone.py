@@ -1,3 +1,7 @@
+import sys
+
+sys.setrecursionlimit(3000)
+
 n, m = map(int, input().split())
 village = [list(map(int, input().split())) for _ in range(n)]
 top=0
