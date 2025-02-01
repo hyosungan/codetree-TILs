@@ -55,7 +55,6 @@ for i in range(k):
     bfs()
     
     if check_visit():
-        print(r,c)
         break
     r,c=change_start(r,c)
     visited=[[0 for _ in range(n)] for _ in range(n)]
