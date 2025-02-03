@@ -9,18 +9,24 @@ ans=0
 def is_beautiful():
     begin=0
 
-    while True:
+    while begin<n:
+
+        if begin+arr[begin]-1>=n:
+            return False
+
         for i in range(begin,begin+arr[begin]):
             if arr[i]!=arr[begin]:
                 return False
         begin=begin+arr[begin]
 
-        if begin==len(arr):
-            return True
-        if begin>len(arr):
-            return False
-        if begin+arr[begin]>len(arr):
-            return False
+    return True
+
+        # if begin==len(arr):
+        #     return True
+        # if begin>len(arr):
+        #     return False
+        # if begin+arr[begin]>len(arr):
+        #     return False
         
         
 
@@ -31,7 +37,7 @@ def P(idx):
             ans+=1
         return 
 
-    for i in range(1,n+1):
+    for i in range(1,5):
         arr.append(i)
         P(idx+1)
         arr.pop()
