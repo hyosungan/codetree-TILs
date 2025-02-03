@@ -38,11 +38,10 @@ def find_bomb_site():
 def choose(idx):
     global grid,ans
     if idx == len(bomb):
-        temp_grid = copy.deepcopy(grid)  # 원본 백업
         for (x, y), num in zip(bomb, bomb_shape):
             shape(x, y, num)
         ans = max(ans, find_bomb_site())
-        grid = copy.deepcopy(temp_grid)  # 원본 복구
+        grid = copy.deepcopy(new_grid)  # 원본 복구
         return
     for i in range(1,4):
         bomb_shape.append(i)
