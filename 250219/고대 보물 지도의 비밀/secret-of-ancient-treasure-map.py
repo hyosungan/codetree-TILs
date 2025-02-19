@@ -21,6 +21,12 @@ for i in range(1,n+1):
         count=1
         continue
     dp[i]=max(a[i],dp[i-1]+a[i])
+    if dp[i]==a[i]:
+        if dp[i]<0:
+            count=1
+        else:
+            count=0
 
 print(max(dp))
+
 
