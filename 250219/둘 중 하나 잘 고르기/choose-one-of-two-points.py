@@ -17,6 +17,9 @@ for i in range(1,2*n+1):
     for j in range(1,n+1):
         if i<j:
             continue
+        if i==j:
+            dp[i][j]=dp[i-1][j-1]+red[i]
+            continue
         dp[i][j]=max(dp[i-1][j-1]+red[i],dp[i-1][j]+blue[i])
 
 print(dp[2*n][n])
