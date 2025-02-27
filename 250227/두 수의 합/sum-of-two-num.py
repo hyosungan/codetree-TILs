@@ -9,10 +9,11 @@ for idx,elem in enumerate(arr):
     else:
         dic[elem]=1
 ans=0
-for i in range(n):
-    if ((k-arr[i] in dic) and (dic[k-arr[i]]>0)) and ((arr[i] in dic) and (dic[arr[i]]>0)):
-        ans+=1
-        dic[k-arr[i]]-=1
-        dic[arr[i]]-=1
-
+for i in arr:
+    if k-i in dic:
+        if i==k-i:
+            ans+=dic[i]-1
+        else:
+            ans+=dic[k-i]
+ans=ans//2
 print(ans)
