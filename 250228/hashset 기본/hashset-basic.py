@@ -6,10 +6,8 @@ for _ in range(n):
     kind=command[0]
 
     if kind=='find':
-        if target in a:
-            print("true")
-        else:
-            print("false") 
+        print("true" if target in a else "false")
+        
     elif kind=='add':
         a.add(target)
     else:
