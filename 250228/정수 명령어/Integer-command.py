@@ -22,5 +22,6 @@ for _ in range(T):
         print("EMPTY")
     else:
         print(s[-1],s[0])
+    s=SortedSet()
 
  
