@@ -1,4 +1,6 @@
 from sortedcontainers import SortedDict
+#일반 dict와의 차이점은 key를 기준으로 자동 오름차순 정렬 된다는점이다. 
+#나머지는 같음. 다만 시간복잡도만 O(logn)이됨
 
 n = int(input())
 dic=SortedDict()
