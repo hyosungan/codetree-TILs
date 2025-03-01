@@ -6,7 +6,10 @@ arr=list(map(int,input().split()))
 
 s=SortedSet(arr)
 
-for i in s[len(s)-1:len(s)-k-1:-1]:
+ss=list(s)
+
+ss.sort(reverse=True)
+for i in ss[:k]:
     print(i,end=' ')
 
 
