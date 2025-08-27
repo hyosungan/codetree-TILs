@@ -21,7 +21,7 @@ for i in range(m):
     if t==0:
         union(a,b)
     else:
-        if uf[a]==uf[b]:
+        if find(a)==find(b):
             print("1")
         else:
             print("0")
