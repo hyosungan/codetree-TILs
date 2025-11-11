@@ -14,8 +14,8 @@ for _ in range(M):
 
 while pq:
     curr_dist,curr_node=heapq.heappop(pq)
-    # if dist[curr_node]!=curr_dist:
-    #     continue
+    if dist[curr_node]!=curr_dist:
+        continue
     for next_node,next_dist in edges[curr_node]:
         if dist[next_node]>curr_dist+next_dist:
             dist[next_node]=curr_dist+next_dist
