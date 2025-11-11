@@ -32,7 +32,7 @@ while x!=A:
     x=path[x]
     ans.append(x)
 
-print(max(dist[1:]))
+print(dist[B])
 print(*ans[::-1])
 
 
